@@ -35,6 +35,6 @@ contract Create2Factory {
 
     function getBytecode(address _owner) public pure returns (bytes memory) {
         bytes memory Bytecode = type(DeployWithCreate2).creationCode;
-        return abi.encodePacked(bytecode, abi.encode(_owner));
+        return abi.encodePacked(Bytecode, abi.encode(_owner));
     }
 }
